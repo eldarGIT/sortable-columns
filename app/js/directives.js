@@ -2,10 +2,14 @@
 
 /* Directives */
 
-
-angular.module('myApp.directives', []).
-  directive('appVersion', ['version', function(version) {
-    return function(scope, elm, attrs) {
-      elm.text(version);
-    };
+angular.module('directives', []).
+  directive('widget', [function() {
+	return {
+		compile: function compile(templateElement, templateAttrs) {
+			templateElement.html("<p>Hello</p>");
+		},
+		link: function($scope, element, attrs) {
+			
+		}
+	}
   }]);

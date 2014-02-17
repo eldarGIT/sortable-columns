@@ -16,15 +16,21 @@
   <!-- <script src="lib/angular/angular-route.js"></script> -->
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
 
   <div ng-controller="appCtrl" class="container">
 	<div class="floatleft">
-		<div ui-sortable="sortableOptions" class="apps-container screen floatleft" ng-model="screen" ng-repeat="screen in rawScreens">
+		<div ui-sortable="sortableOptions" class="widgets apps-container screen floatleft" ng-model="screen" ng-repeat="screen in rawScreens">
 			<div class="app" ng-repeat="app in screen">
 				{{app.title}}
 			</div>
 		</div>
 	</div>
+	
+	<div>
+		<button href="#" ng-click="addNewWidget()">Add new widget</button>
+	</div>
+	
   </div>
   
   <!--

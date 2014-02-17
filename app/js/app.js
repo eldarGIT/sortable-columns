@@ -5,6 +5,7 @@
 var app = angular.module('sortable-columns', [
   //'ngRoute',
   'controllers',
+  'directives',
   'ui.sortable',
 ]);
 // config(['$routeProvider', function($routeProvider) {
